@@ -65,7 +65,6 @@ html, body {
     width: 20px;
     height: 15px;
     padding-left: 3vw;
-    cursor: pointer;
     display: none;
 }
 
@@ -73,6 +72,7 @@ html, body {
     width: 100%;
     height: 3px;
     background-color: rgba(234, 232, 228, 1);
+    cursor: pointer;
 }
 
 .header-categories__back-img {
@@ -176,6 +176,7 @@ html, body {
 .container-gallery img {
     width: 100%;
     height: 100%;
+    max-height: 100%;
     border-radius: 10px;
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.16)
 }
@@ -190,6 +191,47 @@ html, body {
 
 .container-gallery__img3 {
     grid-area: img3;
+}
+
+.app-section {
+    display: grid;
+    grid-template-areas: 
+    "title title app-store-img"
+    "description description play-store-img";
+    column-gap: 1.5vw;
+    row-gap: 0.5vh;
+    margin: 2vh 4vw;
+    padding: 3vh 3vw;
+    background-color: rgba(60, 12, 96, 1);
+    border-radius: 16px;
+}
+
+.app-section p {
+    margin: 0;
+    padding: 0;
+}
+
+.app-section .container__title {
+    grid-area: title;
+    color: rgba(234, 232, 228, 1);
+}
+
+.app-section .container__description {
+    grid-area: description;
+    color: rgba(234, 232, 228, 1);
+}
+
+.app-section__app-store-img {
+    grid-area: app-store-img;
+}
+
+.app-section__play-store-img {
+    grid-area: play-store-img;
+}
+
+.app-section img {
+    width: 10em;
+   margin-left: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -232,9 +274,39 @@ html, body {
     .container-gallery {
         display: flex;
         flex-direction: column;
+        height: auto;
     }
 
     .container-gallery img {
         margin: 2vh 0;
+    }
+
+    /* Mostra seção do app va vertical */
+    .app-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Altera ordem do grid (para mostrar primeiro as informações textuais e depois as imagens das lojas de aplicativos */
+    .app-section__title {
+        order: 1;
+    }
+
+    .app-section__description {
+        order: 2;
+    }
+
+    .app-section__app-store-img {
+        order: 3;
+    }
+
+    .app-section__play-store-img {
+        order: 4;
+    }
+
+    /* Ajusta largura e margem das imagens das lojas de aplicativos */
+    .app-section img {
+        width: 100%;
+        margin: 1vh 0;
     }
 }
