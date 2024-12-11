@@ -1,4 +1,129 @@
 html, body {
     font-family: "Helvetica";
     background-color: rgb(234, 232, 228);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-presentation {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(45, 45, 45, 1);
+    height: 45%;
+}
+
+.header {
+    display: flex;
+    height: 20%;
+    align-items: center;
+}
+
+.header-logo-menu-icon {
+    background-color: rgba(45, 45, 45, 1);
+    display: flex;
+    padding: 2vh 0 2vh 4vw;
+}
+
+.header__logo-img {
+    width: 6em;
+}
+
+.header-categories {
+    display: flex;
+}
+
+.header-categories__category {
+    color: rgba(234, 232, 228, 1);
+    padding: 0 0 0 2vw;
+    cursor: pointer;
+}
+
+/* Adiciona negrito ao passar mouse */
+.header-categories__category:hover {
+    font-weight: bold;
+}
+
+.header-categories__category::before {
+    content: "";
+}
+
+/* Adiciona  • no início da categoria ao passar mouse */
+.header-categories__category:hover::before {
+    content: "• ";
+}
+
+.header-categories__menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 15px;
+    padding-left: 3vw;
+    cursor: pointer;
+    display: none;
+}
+
+.header-categories__menu-icon div {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(234, 232, 228, 1);
+}
+
+.header-categories__back-img {
+    display: none;
+    width: 3.5em;
+    margin: 0 auto;
+    padding-top: 5vh;
+    cursor: pointer;
+}
+
+.header-info {
+    color: rgba(234, 232, 228, 1);
+    padding-left: 4vw;
+    width: 100%;
+}
+
+.header-info__title {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.header-info__description {
+    color: rgba(234, 232, 228, 1);
+    font-size: 1.1em;
+}
+
+.header-info__scroll-img {
+    display: block;
+    width: 2.8em;
+    margin: 2vh auto;
+    padding-top: 5vh;
+}
+
+.container-presentation__logos-img {
+    max-width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    .header-categories {
+        display: none;
+    }
+
+    .header-categories__menu-icon {
+        display: flex;
+    }
+
+    .container-presentation {
+        height: 70%;
+    }
+
+    .container-content {
+        width: 100%;
+    }
+
+    .container-presentation__logos-img {
+        max-width: 35%;
+    }
 }
