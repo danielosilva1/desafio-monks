@@ -111,20 +111,16 @@ html, body {
 }
 
 .product-container {
-    padding: 2vh 4vw;    
-}
-
-.product-container-info {
-    margin: 1vw;
+    padding: 2vh 4vw;
 }
 
 .container__title {
-    font-size: 1.3em;
+    font-size: 2em;
     font-weight: bold;
 }
 
 .container__description {
-    font-size: 0.8em;
+    font-size: 1.1em;
 }
 
 .product-cards {
@@ -159,33 +155,86 @@ html, body {
     font-size: 1em;
 }
 
+.container-gallery {
+    padding: 2vh 4vw;
+    display: grid;
+    grid-template-areas: 
+    "title-description img2"
+    "img1 img2"
+    "img1 img3"
+    "img1 img3";
+    gap: 1vw;
+    height: 100vh;
+    box-sizing: border-box;
+    grid-template-rows: 1fr 1fr 1fr 1fr; /* Altura das linhas do grid: importante para ajuste da altura das imagens */
+}
+
+.gallery-title-description {
+    grid-area: title-description;
+}
+
+.container-gallery img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.16)
+}
+
+.container-gallery__img1 {
+    grid-area: img1;
+}
+
+.container-gallery__img2 {
+    grid-area: img2;
+}
+
+.container-gallery__img3 {
+    grid-area: img3;
+}
+
 @media screen and (max-width: 768px) {
+    /* Oculta o menu de categorias horizontal */ 
     .header-categories {
         display: none;
     }
 
+    /* Mostra o ícone de menu */
     .header-categories__menu-icon {
         display: flex;
     }
 
+    /* Ajusta altura do container de apresentação (container mais externo) */
     .container-presentation {
         height: 70%;
     }
 
+    /* Ajusta largura do container com header e informações (título e descrição) do container de apresentação */
     .container-content {
         width: 100%;
     }
 
+    /* Ajusta largura máxima da imagem com os logos da monks */
     .container-presentation__logos-img {
         max-width: 35%;
     }
 
+    /* Mostra cards de produtos verticalmente e ajusta margem e padding do container */
     .product-cards {
         display: block;
     }
 
     .product-card {
         padding: 2%;
+        margin: 2vh 0;
+    }
+
+    /* Mostra galeria verticalmente e ajusta margens superior e inferior do container */
+    .container-gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-gallery img {
         margin: 2vh 0;
     }
 }

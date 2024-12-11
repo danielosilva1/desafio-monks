@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Altera cor do contanier de apresentação
         document.getElementsByClassName("container-presentation")[0].style.backgroundColor = "rgba(223, 187, 254, 1)";
 
-        // Altera raio das bordas inferiores do header que contém logo e íconde de menu
+        // Altera raio das bordas inferiores do header que contém logo e ícone de menu
         const headerLogoMenuIcon = document.getElementsByClassName("header-logo-menu-icon")[0];
         headerLogoMenuIcon.style.borderBottomLeftRadius = "16px";
         headerLogoMenuIcon.style.borderBottomRightRadius = "16px";
@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Altera cor do texto das categorias
         const categoriesList = document.getElementsByClassName("header-categories__category");
-
         for (let i = 0; i < categoriesList.length; i++) {
             categoriesList[i].style.color = "black";
         }
