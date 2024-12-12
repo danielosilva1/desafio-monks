@@ -103,7 +103,6 @@ html, body {
     display: block;
     width: 2.8em;
     margin: 2vh auto;
-    padding-top: 5vh;
 }
 
 .container-presentation__logos-img {
@@ -131,7 +130,7 @@ html, body {
     width: 100%;
 }
 
-.product-card {
+.card {
     flex: 1;
     margin: 0;
     box-sizing: border-box;
@@ -140,18 +139,18 @@ html, body {
     padding: 1%;
 }
 
-.product-card__image {
+.card__image {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.product-card__title {
+.card__title {
     font-size: 1.2em;
     font-weight: bold;
 }
 
-.product-card__description {
+.card__description {
     font-size: 1em;
 }
 
@@ -178,7 +177,7 @@ html, body {
     height: 100%;
     max-height: 100%;
     border-radius: 10px;
-    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.16)
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.16);
 }
 
 .container-gallery__img1 {
@@ -253,6 +252,29 @@ html, body {
     border-radius: 32px;
 }
 
+.container-cards-section {
+    display: flex;
+    column-gap: 2vw;
+    padding: 2vh 4vw;
+}
+
+.container-cards-section button {
+    background-color: rgba(223, 187, 254, 1);
+    font-weight: bold;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    margin: 0 25%;
+}
+
+.container-cards-section .card {
+    border: solid 2px rgba(223, 187, 254, 1);
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+
 @media screen and (max-width: 768px) {
     /* Oculta o menu de categorias horizontal */ 
     .header-categories {
@@ -284,26 +306,24 @@ html, body {
         display: block;
     }
 
-    .product-card {
+    .card {
         padding: 2%;
         margin: 2vh 0;
     }
 
-    /* Mostra galeria verticalmente e ajusta margens superior e inferior do container */
-    .container-gallery {
+    /* Mostra seções do app, dos cards e container da galeria na vertical */
+    .app-section, .container-cards-section, .container-gallery {
         display: flex;
         flex-direction: column;
+    }
+
+    /* Mostra galeria verticalmente e ajusta margens superior e inferior do container */
+    .container-gallery {
         height: auto;
     }
 
     .container-gallery img {
         margin: 2vh 0;
-    }
-
-    /* Mostra seção do app va vertical */
-    .app-section {
-        display: flex;
-        flex-direction: column;
     }
 
     /* Altera ordem do grid (para mostrar primeiro as informações textuais e depois as imagens das lojas de aplicativos */
