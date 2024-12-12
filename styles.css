@@ -330,6 +330,7 @@ html, body {
 
 .security_area__sum {
     text-align: center;
+    color: rgba(125, 38, 201, 1);
 }
 
 .container-form__button {
