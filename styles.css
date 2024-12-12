@@ -274,6 +274,41 @@ html, body {
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.1);
 }
 
+.container-form {
+    display: flex;
+    padding: 2vh 4vw;
+    background-color: rgba(45, 45, 45, 1);
+    align-items: center;
+}
+
+.container-form img {
+    height: 30vh;
+    width: auto;
+    margin: 1vh 1vw;
+}
+
+.form {
+    background-color: rgba(234, 232, 228, 1);
+    border-radius: 24px;
+    padding: 2vh;
+    width: 100%;
+}
+
+.container-form__input-area {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.form input {
+    border: none;
+    border-radius: 8px;
+    padding: 1vh 1.2vw;
+    margin: 1vh 3vw;
+}
+
+.container__required-fields-info {
+    font-size: 0.7em;
+}
 
 @media screen and (max-width: 768px) {
     /* Oculta o menu de categorias horizontal */ 
@@ -311,8 +346,8 @@ html, body {
         margin: 2vh 0;
     }
 
-    /* Mostra seções do app, dos cards e container da galeria na vertical */
-    .app-section, .container-cards-section, .container-gallery {
+    /* Mostra os containeres na vertical */
+    .app-section, .container-cards-section, .container-gallery, .container-form__input-area {
         display: flex;
         flex-direction: column;
     }
@@ -347,5 +382,10 @@ html, body {
     .app-section img {
         width: 100%;
         margin: 1vh 0;
+    }
+
+    /* Mostra container de contato na vertical (imagem acima do formulário */
+    .container-form {
+        flex-direction: column;
     }
 }
