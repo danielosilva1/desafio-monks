@@ -234,6 +234,25 @@ html, body {
    margin-left: auto;
 }
 
+.container-product-tags {
+    padding: 2vh 4vw;
+}
+
+.product-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-tags p {
+    padding: 0.8vh 2vw;
+    margin: 1vh 1vw;
+    color: rgba(125, 38, 201, 1);
+    background-color: rgba(223, 220, 213, 1);
+    border: solid 1px rgba(125, 38, 201, 1);
+    border-radius: 32px;
+}
+
 @media screen and (max-width: 768px) {
     /* Oculta o menu de categorias horizontal */ 
     .header-categories {
