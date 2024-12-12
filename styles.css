@@ -310,6 +310,44 @@ html, body {
     font-size: 0.7em;
 }
 
+.security-area {
+    display: flex;
+}
+
+.security-area p {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* Div onde as caixas do desafio e resposta estão */
+.security-area div {
+    display: flex;
+}
+
+.security-area input {
+    width: 100%;
+}
+
+.security_area__sum {
+    text-align: center;
+}
+
+.container-form__button {
+    background-color: rgba(223, 187, 254, 1);
+    opacity: 50%;
+    font-weight: bold;
+    padding: 1vh 2vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 30%;
+    margin: 2vh 35%;
+}
+
+.container-form__button:hover {
+    opacity: 100%;
+}
+
 @media screen and (max-width: 768px) {
     /* Oculta o menu de categorias horizontal */ 
     .header-categories {
@@ -384,8 +422,8 @@ html, body {
         margin: 1vh 0;
     }
 
-    /* Mostra container de contato na vertical (imagem acima do formulário */
-    .container-form {
+    /* Mostra container de formulário na vertical (imagem acima do formulário) */
+    .container-form, .security-area {
         flex-direction: column;
     }
 }
