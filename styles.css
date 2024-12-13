@@ -250,6 +250,7 @@ html, body {
     background-color: rgba(223, 220, 213, 1);
     border: solid 1px rgba(125, 38, 201, 1);
     border-radius: 32px;
+    font-weight: bold;
 }
 
 .container-cards-section {
@@ -353,6 +354,55 @@ html, body {
 
 .container-form__button:hover {
     opacity: 100%;
+}
+
+.footer {
+    padding: 4vh 4vw;
+    background-color: rgba(45, 45, 45, 1);
+}
+
+.footer hr {
+    height: 1px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(223, 187, 254, 1);
+    margin-bottom: 3vh;
+}
+
+.social-media-icons {
+    text-align: center;
+}
+
+.social-media-icons img {
+    height: 1.2em;
+    width: auto;
+    margin: 0 0.7vw;
+    cursor: pointer;
+}
+
+.footer-info {
+    text-align: center;
+    margin-top: 1.5vh;
+}
+
+.footer-info p {
+    color: rgba(234, 232, 228, 1);
+}
+
+.footer-info__title {
+    margin-bottom: 1.5vh;
+    font-size: 1.1em;
+}
+
+.footer-categories {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__category {
+    margin: 0 1vw;
+    font-size: 0.8em;
 }
 
 @media screen and (max-width: 768px) {
