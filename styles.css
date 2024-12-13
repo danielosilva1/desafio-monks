@@ -326,10 +326,11 @@ html, body {
 
 .security-area input {
     width: 100%;
+    text-align: center;
+    font-weight: bold;
 }
 
 .security_area__sum {
-    text-align: center;
     color: rgba(125, 38, 201, 1);
 }
 

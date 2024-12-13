@@ -93,10 +93,21 @@ function setSumNumbers() {
     number1 = getAleatoryNumber();
     number2 = getAleatoryNumber();
 
-    console.log(`${number1} + ${number2}`);
-
-    // security_area_sum.
     document.getElementsByClassName("security_area__sum")[0].value = `${number1} + ${number2}`;
+}
+
+// Função realiza a verificação de segurança: se falhar, caixa de resultado fica com borda e background vermelhos. Caso contrário, fica com borda e background verdes
+function securityVerify() {
+    const sumResultElement = document.getElementsByClassName("security_area__sum-result")[0];
+    const result = parseInt(sumResultElement.value);
+
+    if (result == (number1 + number2)) {
+        sumResultElement.style.border = "solid 1px green";
+        sumResultElement.style.backgroundColor = "rgba(33, 250, 0, 0.21)";
+    } else {
+        sumResultElement.style.border = "solid 1px rgb(250, 33, 0)";
+        sumResultElement.style.backgroundColor = "rgba(250, 33, 0, 0.21)";
+    }
 }
 
 // Garante que script será executado após carregamento do DOM
@@ -106,5 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementsByClassName("header-categories__menu-icon")[0].addEventListener("click", handleMenuView);
     document.getElementsByClassName("header-categories__back-img")[0].addEventListener("click", closeVerticalMenu);
+    document.getElementsByClassName("container-form__button")[0].addEventListener("click", securityVerify);
     window.addEventListener("resize", checkWindowWidth);
 });
