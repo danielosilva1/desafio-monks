@@ -99,14 +99,25 @@ function setSumNumbers() {
 // Função realiza a verificação de segurança: se falhar, caixa de resultado fica com borda e background vermelhos. Caso contrário, fica com borda e background verdes
 function securityVerify() {
     const sumResultElement = document.getElementsByClassName("security_area__sum-result")[0];
+    const verifyMsgElement = document.getElementsByClassName("container-form__message")[0];
     const result = parseInt(sumResultElement.value);
 
     if (result == (number1 + number2)) {
-        sumResultElement.style.border = "solid 1px green";
+        sumResultElement.style.border = "solid 1px rgb(33, 250, 0)";
         sumResultElement.style.backgroundColor = "rgba(33, 250, 0, 0.21)";
+        verifyMsgElement.textContent = "Verificação de segurança bem-sucedida: resposta correta!";
+        verifyMsgElement.style.color = "rgb(50, 220, 0)";
+        verifyMsgElement.style.display = "block";
     } else {
         sumResultElement.style.border = "solid 1px rgb(250, 33, 0)";
         sumResultElement.style.backgroundColor = "rgba(250, 33, 0, 0.21)";
+        verifyMsgElement.textContent = "A verificação de segurança falhou. Tente novamente!";
+        verifyMsgElement.style.color = "rgb(250, 33, 0)";
+        verifyMsgElement.style.display = "block";
+        // Escolhe novos números aleatórios, limpa caixa de resposta e coloca foco nela
+        setSumNumbers();
+        sumResultElement.value = "";
+        sumResultElement.focus();
     }
 }
 

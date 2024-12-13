@@ -306,7 +306,7 @@ html, body {
     margin: 1vh 3vw;
 }
 
-.container__required-fields-info {
+.container-form__required-fields-info {
     font-size: 0.7em;
 }
 
@@ -332,6 +332,11 @@ html, body {
 
 .security_area__sum {
     color: rgba(125, 38, 201, 1);
+}
+
+.container-form__message {
+    font-size: 0.75em;
+    display: none;
 }
 
 .container-form__button {
